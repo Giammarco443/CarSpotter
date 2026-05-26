@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Spotter | Hypercar Luxury Marketplace Italia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="nav">
+  <div class="logoBox">
+    <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#d4af37;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#c9a961;stop-opacity:1" />
+        </linearGradient>
+      </defs>
+      <circle cx="50" cy="50" r="48" fill="url(#logoGradient)" opacity="0.2"/>
+      <path d="M 30 50 Q 50 30 70 50 Q 50 70 30 50" stroke="#d4af37" stroke-width="3" fill="none"/>
+      <circle cx="50" cy="50" r="8" fill="#d4af37"/>
+    </svg>
+    <h1>CAR SPOTTER</h1>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="inventory.html">Catalogo</a>
+    <a href="configuratore.html">Configuratore</a>
+    <a href="assistenza.html">Contatti</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="overlay"></div>
+  <div class="heroText">
+    <h1>LUSSO SENZA COMPROMESSI</h1>
+    <p>Le Hypercar Più Esclusive del Mondo</p>
+  </div>
+</section>
+
+<section class="statsSection">
+  <div class="statBox">
+    <div class="statNumber">500+</div>
+    <div class="statLabel">Clienti VIP</div>
+  </div>
+  <div class="statBox">
+    <div class="statNumber">75</div>
+    <div class="statLabel">Hypercar in Stock</div>
+  </div>
+  <div class="statBox">
+    <div class="statNumber">2026</div>
+    <div class="statLabel">Anno di Fondazione</div>
+  </div>
+  <div class="statBox">
+    <div class="statNumber">24/7</div>
+    <div class="statLabel">Concierge Dedicato</div>
+  </div>
+</section>
+
+<section class="sliderSection">
+  <button onclick="prev()">‹</button>
+  <svg class="slider" width="900" height="500" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="carGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#1a1a3e;stop-opacity:1" />
+        <stop offset="50%" style="stop-color:#2d5a7b;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#1a1a3e;stop-opacity:1" />
+      </linearGradient>
+    </defs>
+    <rect width="900" height="500" fill="url(#carGradient)"/>
+    <ellipse cx="450" cy="300" rx="350" ry="150" fill="#d4af37" opacity="0.1"/>
+    <text x="450" y="250" font-family="Playfair Display, serif" font-size="48" fill="#d4af37" text-anchor="middle" opacity="0.8">HYPERCAR PREMIUM</text>
+    <text x="450" y="320" font-family="Poppins, sans-serif" font-size="24" fill="#c9a961" text-anchor="middle" opacity="0.6">Esperienza Esclusiva</text>
+  </svg>
+  <button onclick="next()">›</button>
+</section>
+
+<section class="intro">
+  <h2>Collezione Esclusiva</h2>
+  <p>Scopri la nostra selezione di hypercar dalle più prestigiose case automobilistiche mondiali</p>
+</section>
+
+<section class="grid">
+  <div class="card" onclick="showDetails('bugatti')">
+    <svg width="100%" height="350" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="bugatti" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#0a0a0a;stop-opacity:1" />
+          <stop offset="50%" style="stop-color:#1a3a52;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:1" />
+        </linearGradient>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#bugatti)"/>
+      <text x="50%" y="40%" font-family="Playfair Display, serif" font-size="52" fill="#d4af37" text-anchor="middle" opacity="0.9">BUGATTI</text>
+      <text x="50%" y="60%" font-family="Poppins, sans-serif" font-size="28" fill="#c9a961" text-anchor="middle" opacity="0.7">CHIRON</text>
+    </svg>
+    <h3>Bugatti Chiron</h3>
+    <p>1.500 CV Hypercar Leggendaria</p>
+  </div>
+
+  <div class="card" onclick="showDetails('ferrari')">
+    <svg width="100%" height="350" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="ferrari" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#1a0a0a;stop-opacity:1" />
+          <stop offset="50%" style="stop-color:#3a1a1a;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#1a0a0a;stop-opacity:1" />
+        </linearGradient>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#ferrari)"/>
+      <text x="50%" y="40%" font-family="Playfair Display, serif" font-size="52" fill="#d4af37" text-anchor="middle" opacity="0.9">FERRARI</text>
+      <text x="50%" y="60%" font-family="Poppins, sans-serif" font-size="28" fill="#c9a961" text-anchor="middle" opacity="0.7">F40</text>
+    </svg>
+    <h3>Ferrari F40</h3>
+    <p>478 CV Icona Leggendaria</p>
+  </div>
+
+  <div class="card" onclick="showDetails('koenigsegg')">
+    <svg width="100%" height="350" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="koenigsegg" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#0a0a15;stop-opacity:1" />
+          <stop offset="50%" style="stop-color:#1a2a4a;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#0a0a15;stop-opacity:1" />
+        </linearGradient>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#koenigsegg)"/>
+      <text x="50%" y="40%" font-family="Playfair Display, serif" font-size="48" fill="#d4af37" text-anchor="middle" opacity="0.9">KOENIGSEGG</text>
+      <text x="50%" y="60%" font-family="Poppins, sans-serif" font-size="28" fill="#c9a961" text-anchor="middle" opacity="0.7">JESKO</text>
+    </svg>
+    <h3>Koenigsegg Jesko</h3>
+    <p>1.600 CV Capolavoro Svedese</p>
+  </div>
+
+  <div class="card" onclick="showDetails('lamborghini')">
+    <svg width="100%" height="350" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="lamborghini" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#0a0a0a;stop-opacity:1" />
+          <stop offset="50%" style="stop-color:#2a1a0a;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:1" />
+        </linearGradient>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#lamborghini)"/>
+      <text x="50%" y="40%" font-family="Playfair Display, serif" font-size="48" fill="#d4af37" text-anchor="middle" opacity="0.9">LAMBORGHINI</text>
+      <text x="50%" y="60%" font-family="Poppins, sans-serif" font-size="28" fill="#c9a961" text-anchor="middle" opacity="0.7">AVENTADOR</text>
+    </svg>
+    <h3>Lamborghini Aventador</h3>
+    <p>740 CV Eleganza Italiana</p>
+  </div>
+</section>
+
+<section class="whySection">
+  <h2>Perché Scegliere Car Spotter</h2>
+  <div class="whyGrid">
+    <div class="whyCard">
+      <div class="whyIcon">👑</div>
+      <h3>Selezione Curata</h3>
+      <p>Ogni veicolo è verificato personalmente dal nostro team di esperti per garantire autenticità e condizioni impeccabili.</p>
+    </div>
+    <div class="whyCard">
+      <div class="whyIcon">🔐</div>
+      <h3>Transazioni Sicure</h3>
+      <p>Prezzi trasparenti e metodi di pagamento completamente sicuri per la tua tranquillità.</p>
+    </div>
+    <div class="whyCard">
+      <div class="whyIcon">⚡</div>
+      <h3>Consegna Express</h3>
+      <p>Servizio white-glove con spedizione mondiale e gestione logistica premium.</p>
+    </div>
+    <div class="whyCard">
+      <div class="whyIcon">👔</div>
+      <h3>Concierge 24/7</h3>
+      <p>Team dedicato disponibile h24 per assistenza personalizzata e consulenza esclusiva.</p>
+    </div>
+  </div>
+</section>
+
+<section class="gallerySection">
+  <h2>Galeria Premium</h2>
+  <div class="gallery">
+    <div class="galleryItem">
+      <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#0a0a0a;stop-opacity:1" />
+            <stop offset="50%" style="stop-color:#1a3a52;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#g1)"/>
+        <ellipse cx="50%" cy="50%" rx="40%" ry="45%" fill="#d4af37" opacity="0.15"/>
+      </svg>
+      <div class="galleryOverlay"><span>✨ Pregio</span></div>
+    </div>
+    <div class="galleryItem">
+      <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#1a0a0a;stop-opacity:1" />
+            <stop offset="50%" style="stop-color:#3a1a1a;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#1a0a0a;stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#g2)"/>
+        <ellipse cx="50%" cy="50%" rx="40%" ry="45%" fill="#d4af37" opacity="0.15"/>
+      </svg>
+      <div class="galleryOverlay"><span>✨ Iconica</span></div>
+    </div>
+    <div class="galleryItem">
+      <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#0a0a15;stop-opacity:1" />
+            <stop offset="50%" style="stop-color:#1a2a4a;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#0a0a15;stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#g3)"/>
+        <ellipse cx="50%" cy="50%" rx="40%" ry="45%" fill="#d4af37" opacity="0.15"/>
+      </svg>
+      <div class="galleryOverlay"><span>✨ Innovativa</span></div>
+    </div>
+    <div class="galleryItem">
+      <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#0a0a0a;stop-opacity:1" />
+            <stop offset="50%" style="stop-color:#2a1a0a;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#g4)"/>
+        <ellipse cx="50%" cy="50%" rx="40%" ry="45%" fill="#d4af37" opacity="0.15"/>
+      </svg>
+      <div class="galleryOverlay"><span>✨ Eleganza</span></div>
+    </div>
+    <div class="galleryItem">
+      <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="g5" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#0a0a1a;stop-opacity:1" />
+            <stop offset="50%" style="stop-color:#1a2a5a;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#0a0a1a;stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#g5)"/>
+        <ellipse cx="50%" cy="50%" rx="40%" ry="45%" fill="#d4af37" opacity="0.15"/>
+      </svg>
+      <div class="galleryOverlay"><span>✨ Comfort</span></div>
+    </div>
+    <div class="galleryItem">
+      <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="g6" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#1a0a1a;stop-opacity:1" />
+            <stop offset="50%" style="stop-color:#3a1a2a;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#1a0a1a;stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#g6)"/>
+        <ellipse cx="50%" cy="50%" rx="40%" ry="45%" fill="#d4af37" opacity="0.15"/>
+      </svg>
+      <div class="galleryOverlay"><span>✨ Eredità</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="ctaSection">
+  <h2>Pronto a Possedere la Tua Hypercar da Sogno?</h2>
+  <p>Unisciti all'élite di Car Spotter e vivi l'eccellenza automobilistiche assoluta</p>
+  <a href="inventory.html" class="ctaBtn">Esplora la Collezione</a>
+</section>
+
+<div id="carModal" class="modal">
+  <div class="modalContent">
+    <button class="closeModal" onclick="closeModal()">×</button>
+    <div class="carDetails" id="carDetailsContent"></div>
+  </div>
+</div>
+
+<footer>
+  <p>CAR SPOTTER © 2026 — Luxury Division Italia | Il Tuo Gateway verso i Sogni Automobilistici Esclusivi</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

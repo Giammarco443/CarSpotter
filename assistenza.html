@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Spotter | VIP Concierge Support</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="marble-bg page-padding">
+
+    <header class="nav">
+        <div class="logoBox">
+            <img src="logo.jpg" class="logo" alt="Car Spotter Logo">
+            <h1 class="logo-text">CAR SPOTTER</h1>
+        </div>
+        <nav>
+            <a href="index.html">AUTO</a>
+            <a href="inventory.html">Collezione Privata</a>
+            <a href="configuratore.html">Configuratore</a>
+            <a href="assistenza.html" class="active">Concierge VIP</a>
+        </nav>
+    </header>
+
+    <section class="support top-space">
+        <span class="gold-subtitle">Canale Cifrato</span>
+        <h2>VIP Concierge Service</h2>
+        <p class="subtitle">I nostri specialisti di Private Sales sono pronti ad assisterla ad ogni latitudine.</p>
+
+        <div class="contact-card">
+            <h3>Linee Dirette Prioritarie</h3>
+            <p><strong>Email Amministrazione:</strong> totchat22@gmail.com</p>
+            <p><strong>Concierge Telefonico H24:</strong> +39 379 258 7216</p>
+            <p class="availability">Global Coverage • Risposta entro 3 minuti</p>
+        </div>
+
+        <!-- FORM INTEGRATO CON FORMSPREE -->
+        <div class="form-container">
+            <h3>Richiedi Chiamata Protetta</h3>
+            <input type="text" id="name" name="name" placeholder="Titolo / Nome e Cognome" required>
+            <input type="email" id="email" name="email" placeholder="Indirizzo Email Personale" required>
+            <input type="tel" id="phone" name="phone" placeholder="Recapito Telefonico Diretto" required>
+            <textarea id="msg" name="message" maxlength="500" rows="5" placeholder="Dettagli sul modello di interesse o richiesta appuntamento privato..." required></textarea>
+            
+            <button class="gold-btn full-width" onclick="send()">Inizializzare Contatto VIP</button>
+            <div id="out"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>CAR SPOTTER © 2026 — Luxury Division | Confidentiality Guaranteed</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

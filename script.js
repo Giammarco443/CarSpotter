@@ -113,21 +113,38 @@ function updateConfigurator() {
     log.innerHTML = `<span style="color:var(--gold);">Sincronizzazione Atelier...</span>`;
 
     setTimeout(() => {
-        // imposta background-image e fallback <img>
+        frame.innerHTML = ''; // pulisce completamente il frame
+        frame.style.backgroundImage = 'none';
+        
         if (imgPath) {
-            frame.style.backgroundImage = `url('${imgPath}')`;
-            frame.style.backgroundSize = 'contain';
-            frame.style.backgroundRepeat = 'no-repeat';
-            frame.style.backgroundPosition = 'center';
-            frame.innerHTML = `<img src="${imgPath}" alt="${model.options[model.selectedIndex].text}" onerror="this.onerror=null;this.style.display='none';this.parentElement.style.backgroundImage='url(https://via.placeholder.com/1200x800?text=Immagine+non+disponibile)';">`;
+            // crea img element SENZA background-image per evitare sovrapposizioni
+            const imgEl = document.createElement('img');
+            imgEl.src = imgPath;
+            imgEl.alt = model.options[model.selectedIndex].text;
+            imgEl.style.maxWidth = '100%';
+            imgEl.style.maxHeight = '100%';
+            imgEl.style.width = 'auto';
+            imgEl.style.height = 'auto';
+            imgEl.style.objectFit = 'contain';
+            imgEl.style.display = 'block';
+            imgEl.style.margin = '0 auto';
+            imgEl.onerror = function() { 
+                this.parentElement.innerHTML = '<span style="color: var(--text-muted);">Immagine non disponibile</span>';
+            };
+            
+            frame.appendChild(imgEl);
         } else {
-            frame.style.backgroundImage = '';
-            frame.innerHTML = `${model.options[model.selectedIndex].text}`;
+            frame.innerHTML = model.options[model.selectedIndex].text;
         }
 
-        // aggiunge descrizione colore sotto l'immagine
-        const colorText = `<div style=\"font-size:1rem;color:var(--gold);margin-top:10px;\">${color.options[color.selectedIndex].text}</div>`;
-        frame.innerHTML += colorText;
+        // aggiunge colore text sotto
+        const colorDiv = document.createElement('div');
+        colorDiv.style.fontSize = '1rem';
+        colorDiv.style.color = 'var(--gold)';
+        colorDiv.style.marginTop = '15px';
+        colorDiv.style.textAlign = 'center';
+        colorDiv.textContent = color.options[color.selectedIndex].text;
+        frame.appendChild(colorDiv);
 
         log.innerHTML = `Configurazione Aggiornata con Successo.`;
         frame.style.opacity = '1';

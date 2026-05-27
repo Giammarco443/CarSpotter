@@ -12,10 +12,7 @@
 
     <header class="nav">
         <div class="logoBox">
-            <svg class="luxury-logo-svg" viewBox="0 0 100 100" width="45" height="45">
-                <circle cx="50" cy="50" r="48" fill="rgba(212, 175, 55, 0.1)" stroke="#d4af37" stroke-width="1"/>
-                <path d="M 30 50 L 50 20 L 70 50 L 50 80 Z" stroke="#d4af37" stroke-width="2" fill="none"/>
-            </svg>
+            <img src="logo.jpg" alt="Car Spotter" class="luxury-logo-svg" style="width: 45px; height: 45px; border-radius: 50%;">
             <h1 class="logo-text">CAR SPOTTER</h1>
         </div>
         <nav class="nav-links">
@@ -36,13 +33,13 @@
     <section class="reveal">
         <div class="form-container glass-panel">
             <h3 style="color: var(--gold); border-bottom: 1px solid var(--glass-border); padding-bottom: 15px; margin-bottom: 20px;">Richiesta Accesso</h3>
-            <input type="text" id="name" placeholder="Nome, Cognome e Società" required>
-            <input type="email" id="email" placeholder="Indirizzo Email Verificato" required>
-            <input type="tel" id="phone" placeholder="Numero Diretto (con prefisso int.)" required>
-            <textarea id="msg" rows="5" placeholder="Dettagli sulla vettura o richiesta..." required></textarea>
-            
-            <button class="gold-btn" onclick="send()">Richiedi Protocollo di Contatto</button>
-            <div id="out" style="margin-top: 20px; font-size: 0.9rem; font-family: monospace; text-align: center;"></div>
+            <form action="https://formspree.io/f/mlgvpkzy" method="POST">
+                <input type="text" name="name" placeholder="Nome, Cognome e Società" required>
+                <input type="email" name="email" placeholder="Indirizzo Email Verificato" required>
+                <input type="tel" name="phone" placeholder="Numero Diretto (con prefisso int.)" required>
+                <textarea name="message" rows="5" placeholder="Dettagli sulla vettura o richiesta..." required></textarea>
+                <button type="submit" class="gold-btn">Richiedi Protocollo di Contatto</button>
+            </form>
         </div>
     </section>
 

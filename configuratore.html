@@ -3,81 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Spotter | Tailor-Made Configurator</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <title>Car Spotter | Atelier Configurator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="marble-bg page-padding">
+<body>
+    <div class="custom-cursor"></div><div class="cursor-trail"></div>
 
     <header class="nav">
         <div class="logoBox">
-            <img src="logo.jpg" class="logo" alt="Car Spotter Logo">
+            <svg class="luxury-logo-svg" viewBox="0 0 100 100" width="45" height="45">
+                <circle cx="50" cy="50" r="48" fill="rgba(212, 175, 55, 0.1)" stroke="#d4af37" stroke-width="1"/>
+                <path d="M 30 50 L 50 20 L 70 50 L 50 80 Z" stroke="#d4af37" stroke-width="2" fill="none"/>
+            </svg>
             <h1 class="logo-text">CAR SPOTTER</h1>
         </div>
-        <nav>
-            <a href="index.html">AUTO</a>
-            <a href="inventory.html">Collezione Privata</a>
+        <nav class="nav-links">
+            <a href="index.html">Showroom</a>
+            <a href="inventory.html">Catalogo</a>
             <a href="configuratore.html" class="active">Configuratore</a>
-            <a href="assistenza.html">Concierge VIP</a>
+            <a href="assistenza.html">Concierge</a>
         </nav>
+        <div class="menu-toggle" id="mobile-menu"><span></span><span></span><span></span></div>
     </header>
 
-    <section class="intro top-space">
-        <span class="gold-subtitle">Atelier di Configurazione</span>
-        <h2>Sartoria Automobilistica</h2>
-        <p>Definisci ogni singolo dettaglio della tua prossima Hypercar</p>
+    <section class="top-space reveal">
+        <span class="gold-tag">Atelier Su Misura</span>
+        <h2 style="font-size: 3rem; margin: 10px 0;">SARTORIA AUTOMOBILISTICA</h2>
     </section>
 
-    <div class="configContainer">
-        <div class="configPreview">
-            <div class="preview-badge">Anteprima HD Live</div>
-            <img id="carImage" src="bugattiesterni.jpg" alt="Configurazione Hypercar">
-            <div id="specLog" class="spec-log">
-                Configurazione Attuale: Bugatti Chiron | Vista: Esterno | Colore: Bianco Perla | Cerchi: Diamond Cut Carbon
+    <div class="grid reveal" style="padding-top: 20px;">
+        <div class="glass-panel" style="padding: 20px; text-align: center;">
+            <div id="visualCarFrame" class="luxury-placeholder" style="height: 400px; border-radius: 8px; transition: opacity 0.5s;">
+                Bugatti Chiron<br><span style="font-size: 1rem; color: #fff;">Scegli specifiche...</span>
+            </div>
+            <div id="specLog" style="margin-top: 15px; font-size: 0.8rem; color: var(--gold); font-family: monospace;">
+                Motore di Rendering Attivo.
             </div>
         </div>
 
-        <div class="configPanel">
-            <h3>1. Scegli la Base</h3>
-            <label>Modello Hypercar</label>
+        <div class="glass-panel" style="padding: 40px;">
+            <h3 style="color: var(--gold);">1. Piattaforma</h3>
             <select id="model" onchange="updateConfigurator()">
-                <option value="bugatti">Bugatti Chiron</option>
-                <option value="f40">Ferrari F40</option>
-                <option value="jesko">Koenigsegg Jesko</option>
-                <option value="lambo">Lamborghini Aventador</option>
+                <option value="bugatti">Bugatti Chiron V16</option>
+                <option value="f40">Ferrari F40 Restomod</option>
+                <option value="jesko">Koenigsegg Jesko Absolut</option>
             </select>
 
-            <h3 class="mt-20">2. Prospettiva</h3>
-            <label>Inquadratura Atelier</label>
-            <div class="btn-group">
-                <button id="btn-esterno" class="gold-btn active" onclick="setView('esterno')">Esterni Vettura</button>
-                <button id="btn-interno" class="gold-btn" onclick="setView('interno')">Cockpit Interno</button>
+            <h3 style="color: var(--gold); margin-top: 30px;">2. Prospettiva Atelier</h3>
+            <div style="display: flex; gap: 10px; margin-top: 15px;">
+                <button id="btn-esterno" class="gold-btn active" onclick="setView('esterno')" style="margin-top: 0;">Esterni</button>
+                <button id="btn-interno" class="gold-btn" onclick="setView('interno')" style="margin-top: 0;">Cockpit</button>
             </div>
 
-            <h3 class="mt-20">3. Livrea Personalizzata</h3>
-            <label>Verniciatura Esterna / Finiture</label>
+            <h3 style="color: var(--gold); margin-top: 30px;">3. Tonalità Livrea</h3>
             <select id="color" onchange="updateConfigurator()">
-                <option value="bianco">Bianco Perla Extra-Campionario</option>
-                <option value="oro">Oro Zecchino Satinato 24k</option>
-                <option value="carbonio">Carbonio Liquido Lucido</option>
-                <option value="rosso">Rosso Storico Corsa</option>
-            </select>
-
-            <h3 class="mt-20">4. Scarpe D'Autore</h3>
-            <label>Cerchi in Lega e Freni</label>
-            <select id="wheels" onchange="updateConfigurator()">
-                <option value="diamond">Diamond Cut Carbon Edition</option>
-                <option value="monoblocco">Magnesio Monoblocco Oro</option>
-                <option value="titanio">Titanio Forgiato Ultra-Light</option>
+                <option value="oro">Oro Zecchino Satinato</option>
+                <option value="carbonio">Carbonio a Vista Liquido</option>
+                <option value="nero">Nero Ossidiana</option>
             </select>
             
-            <button class="gold-btn full-width mt-20" onclick="salvaConfigurazione()">Invia Ordine al Concierge</button>
+            <button class="gold-btn magnetic-btn" onclick="salvaConfigurazione()" style="margin-top: 40px;">Invia Ordine al Concierge</button>
         </div>
     </div>
 
-    <footer>
-        <p>CAR SPOTTER © 2026</p>
-    </footer>
+    <footer><p>CAR SPOTTER © 2026 — Rendering Olografico Prototypes</p></footer>
 
     <script src="script.js"></script>
 </body>

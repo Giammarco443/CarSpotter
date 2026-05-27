@@ -3,126 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Spotter | Atelier Hypercar di Lusso</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <title>Car Spotter | Hypercar Luxury Marketplace Italia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="marble-bg">
+<body>
+    <div class="custom-cursor"></div>
+    <div class="cursor-trail"></div>
 
-    <!-- LOADER -->
     <div id="loader">
-        <h1>CAR SPOTTER</h1>
+        <h1 class="loader-title">CAR SPOTTER</h1>
         <div class="line-loader"></div>
-        <p>L'Atelier dell'Automobile d'Élite...</p>
+        <p class="gold-tag">Inizializzazione Vetrina VIP...</p>
     </div>
 
-    <!-- NAVBAR CRISTALLINA -->
     <header class="nav">
         <div class="logoBox">
-            <img src="logo.jpg" class="logo" alt="Car Spotter Logo">
+            <svg class="luxury-logo-svg" viewBox="0 0 100 100" width="45" height="45">
+                <circle cx="50" cy="50" r="48" fill="rgba(212, 175, 55, 0.1)" stroke="#d4af37" stroke-width="1"/>
+                <path d="M 30 50 L 50 20 L 70 50 L 50 80 Z" stroke="#d4af37" stroke-width="2" fill="none"/>
+            </svg>
             <h1 class="logo-text">CAR SPOTTER</h1>
         </div>
-        <nav>
-            <a href="index.html" class="active">AUTO</a>
-            <a href="inventory.html">Collezione Privata</a>
+        <nav class="nav-links">
+            <a href="index.html" class="active">Showroom</a>
+            <a href="inventory.html">Catalogo</a>
             <a href="configuratore.html">Configuratore</a>
-            <a href="assistenza.html">Concierge VIP</a>
+            <a href="assistenza.html">Concierge</a>
         </nav>
+        <div class="menu-toggle" id="mobile-menu"><span></span><span></span><span></span></div>
     </header>
 
-    <!-- HERO IMPERIALE -->
     <section class="hero">
         <div class="overlay"></div>
-        <div class="heroText">
-            <span class="gold-tag">Benvenuti nel Club dell'1%</span>
-            <h1>IL MANIFESTO DELLE HYPERCAR</h1>
-            <p>Oltre il concetto di velocità. Pura arte ingegneristica su misura.</p>
+        <div class="heroText reveal">
+            <span class="gold-tag">L'Eccellenza in Movimento</span>
+            <h1>LUSSO SENZA COMPROMESSI</h1>
+            <p>Esplora il Marketplace di Hypercar Più Esclusivo d'Italia</p>
         </div>
     </section>
 
-    <!-- STATS IN MARMO E ORO -->
-    <section class="statsSection">
-        <div class="statBox">
-            <div class="statNumber">500+</div>
-            <p>Capolavori Consegnati</p>
-        </div>
-        <div class="statBox">
-            <div class="statNumber">24/7</div>
-            <p>Assistenza Concierge Dedicata</p>
-        </div>
-        <div class="statBox">
-            <div class="statNumber">100%</div>
-            <p>Tracciabilità Internazionale</p>
-        </div>
-    </section>
-
-    <!-- INTRODUZIONE ALLA GALLERIA -->
-    <section class="intro">
-        <span class="gold-subtitle">Selezione Curata</span>
-        <h2>Le Icone del Salone Reale</h2>
-        <p>Opere d'arte cinetiche pronte ad entrare nella vostra collezione privata</p>
-    </section>
-
-    <!-- SEZIONE GRID CON GLI ESTERNI/INTERNI -->
-    <section class="grid">
-        <div class="card show">
-            <div class="cardImages">
-                <img src="bugattiesterni.jpg" alt="Bugatti Chiron">
-                <img src="bugattiinterni.jpg" alt="Bugatti Interni">
+    <!-- GRIGLIA CON IMMAGINI REALI -->
+    <section class="grid reveal top-space" style="padding-top: 80px;">
+        
+        <!-- BUGATTI -->
+        <div class="card" onclick="showDetails('bugatti')">
+            <div class="car-image-container">
+                <div class="car-image" style="background-image: url('bugattiesterni.jpg');">
+                    <img src="bugattiesterni.jpg" alt="Bugatti Chiron" onerror="this.onerror=null;this.src='https://via.placeholder.com/1200x800?text=Immagine+non+disponibile';">
+                </div>
             </div>
             <div class="cardContent">
                 <h3>Bugatti Chiron</h3>
-                <p>1.500 CV — L'apice assoluto della manifattura di Molsheim.</p>
+                <p>1.500 CV — Capolavoro d'ingegneria</p>
+                <span class="gold-tag" style="font-size: 0.7rem; margin-top: 15px; display: block;">Esplora ✦</span>
             </div>
         </div>
 
-        <div class="card show">
-            <div class="cardImages">
-                <img src="f40esterno.jpg" alt="Ferrari F40">
-                <img src="f40interni.jpg" alt="Ferrari F40 Interni">
+        <!-- FERRARI -->
+        <div class="card" onclick="showDetails('ferrari')">
+            <div class="car-image-container">
+                <div class="car-image" style="background-image: url('f40esterno.jpg');">
+                    <img src="f40esterno.jpg" alt="Ferrari F40" onerror="this.onerror=null;this.src='https://via.placeholder.com/1200x800?text=Immagine+non+disponibile';">
+                </div>
             </div>
             <div class="cardContent">
                 <h3>Ferrari F40</h3>
-                <p>Leggenda Analogica — Il Cavallino Rampante più puro di sempre.</p>
+                <p>478 CV — Leggenda Analogica</p>
+                <span class="gold-tag" style="font-size: 0.7rem; margin-top: 15px; display: block;">Esplora ✦</span>
             </div>
         </div>
 
-        <div class="card show">
-            <div class="cardImages">
-                <img src="jeskoesterno.jpg" alt="Koenigsegg Jesko">
-                <img src="jeskointerni.jpg" alt="Koenigsegg Jesko Interni">
+        <!-- KOENIGSEGG -->
+        <div class="card" onclick="showDetails('koenigsegg')">
+            <div class="car-image-container">
+                <div class="car-image" style="background-image: url('jeskoesterno.jpg');">
+                    <img src="jeskoesterno.jpg" alt="Koenigsegg Jesko" onerror="this.onerror=null;this.src='https://via.placeholder.com/1200x800?text=Immagine+non+disponibile';">
+                </div>
             </div>
             <div class="cardContent">
                 <h3>Koenigsegg Jesko</h3>
-                <p>1.600 CV — La rivoluzione aerodinamica svedese.</p>
+                <p>1.600 CV — Downforce Estrema</p>
+                <span class="gold-tag" style="font-size: 0.7rem; margin-top: 15px; display: block;">Esplora ✦</span>
             </div>
         </div>
 
-        <div class="card show">
-            <div class="cardImages">
-                <img src="lamboesterno.jpg" alt="Lamborghini Aventador">
-                <img src="lambointerni.jpg" alt="Lamborghini Interni">
-            </div>
-            <div class="cardContent">
-                <h3>Lamborghini Aventador</h3>
-                <p>V12 Aspirato — L'urlo taurino che ha ridefinito la Motor Valley.</p>
-            </div>
-        </div>
     </section>
 
-    <!-- CALL TO ACTION REGALE -->
-    <section class="ctaSection">
-        <h2>Iniziate il Vostro Viaggio</h2>
-        <p>Accedete alle trattative riservate o configurate la vostra prossima signature hypercar.</p>
-        <div class="cta-buttons">
-            <a href="configuratore.html" class="ctaBtn">Apri Configuratore</a>
-            <a href="inventory.html" class="ctaBtn secondary-btn">Vedi Inventario</a>
+    <!-- MODALE -->
+    <div id="carModal" class="modal">
+        <div class="modalContent glass-panel" style="max-width: 600px; text-align: center;">
+            <button class="closeModal" onclick="closeModal()">×</button>
+            <div id="carDetailsContent"></div>
         </div>
-    </section>
+    </div>
 
-    <footer>
-        <p>CAR SPOTTER © 2026 — Haute Horlogerie of Automotive | Luxury Division</p>
-    </footer>
+    <footer><p>CAR SPOTTER © 2026 — Luxury Division | Il Gateway verso l'Eccellenza</p></footer>
 
     <script src="script.js"></script>
 </body>

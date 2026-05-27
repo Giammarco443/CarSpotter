@@ -4,64 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Spotter | Collezione Privata</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="marble-bg page-padding">
+<body>
+    <div class="custom-cursor"></div><div class="cursor-trail"></div>
 
     <header class="nav">
         <div class="logoBox">
-            <img src="logo.jpg" class="logo" alt="Car Spotter Logo">
+            <svg class="luxury-logo-svg" viewBox="0 0 100 100" width="45" height="45">
+                <circle cx="50" cy="50" r="48" fill="rgba(212, 175, 55, 0.1)" stroke="#d4af37" stroke-width="1"/>
+                <path d="M 30 50 L 50 20 L 70 50 L 50 80 Z" stroke="#d4af37" stroke-width="2" fill="none"/>
+            </svg>
             <h1 class="logo-text">CAR SPOTTER</h1>
         </div>
-        <nav>
-            <a href="index.html">AUTO</a>
-            <a href="inventory.html" class="active">Collezione Privata</a>
+        <nav class="nav-links">
+            <a href="index.html">Showroom</a>
+            <a href="inventory.html" class="active">Catalogo</a>
             <a href="configuratore.html">Configuratore</a>
-            <a href="assistenza.html">Concierge VIP</a>
+            <a href="assistenza.html">Concierge</a>
         </nav>
+        <div class="menu-toggle" id="mobile-menu"><span></span><span></span><span></span></div>
     </header>
 
-    <section class="intro top-space">
-        <span class="gold-subtitle">Disponibilità Immediata</span>
-        <h2>L'Inventario Riservato</h2>
-        <p>Modelli unici custoditi nei nostri caveau climatizzati europei.</p>
+    <section class="top-space reveal">
+        <span class="gold-tag">Caveau Europeo</span>
+        <h2 style="font-size: 3rem; margin: 10px 0;">INVENTARIO RISERVATO</h2>
+        <p>Esemplari in disponibilità immediata, conservati ad atmosfera controllata.</p>
     </section>
 
-    <section class="grid">
-        <div class="card show">
-            <img src="bugattiesterni.jpg" alt="Bugatti Chiron" class="static-card-img">
+    <!-- GRIGLIA CON LE TUE IMMAGINI -->
+    <section class="grid reveal" style="padding-top: 40px;">
+        
+        <!-- PORSCHE 918 -->
+        <div class="card">
+            <div class="car-image-container" style="height: 300px;">
+                <div class="car-image" style="background-image: url('spyder918esterno.jpg');">
+                    <img src="spyder918esterno.jpg" alt="Porsche 918 Spyder" onerror="this.onerror=null;this.src='https://via.placeholder.com/1200x800?text=Immagine+non+disponibile';">
+                </div>
+            </div>
             <div class="cardContent">
-                <h3>Bugatti Chiron</h3>
-                <p>Chilometri Zero — Certificata Bugatti Heritage</p>
+                <h3>Porsche 918 Spyder</h3>
+                <p>Weissach Package — 2015</p>
+                <p style="color: var(--gold); font-size: 0.9rem; margin-top: 10px;">Prezzo su Richiesta</p>
             </div>
         </div>
-        <div class="card show">
-            <img src="f40esterno.jpg" alt="Ferrari F40" class="static-card-img">
+
+        <!-- MCLAREN P1 -->
+        <div class="card">
+            <div class="car-image-container" style="height: 300px;">
+                <div class="car-image" style="background-image: url('mclarenesterno.jpg');">
+                    <img src="mclarenesterno.jpg" alt="McLaren P1" onerror="this.onerror=null;this.src='https://via.placeholder.com/1200x800?text=Immagine+non+disponibile';">
+                </div>
+            </div>
             <div class="cardContent">
-                <h3>Ferrari F40</h3>
-                <p>Condizioni da Concorso — Certificazione Classiche</p>
+                <h3>McLaren P1</h3>
+                <p>Carbon Black Series — 1 di 375</p>
+                <p style="color: var(--gold); font-size: 0.9rem; margin-top: 10px;">Prezzo su Richiesta</p>
             </div>
         </div>
-        <div class="card show">
-            <img src="jeskoesterno.jpg" alt="Koenigsegg Jesko" class="static-card-img">
-            <div class="cardContent">
-                <h3>Koenigsegg Jesko</h3>
-                <p>Esemplare 1 di 125 — Allocazione Protetta</p>
-            </div>
-        </div>
-        <div class="card show">
-            <img src="lamboesterno.jpg" alt="Lamborghini Aventador" class="static-card-img">
-            <div class="cardContent">
-                <h3>Lamborghini Aventador</h3>
-                <p>Ultima Serie V12 — Collezione Privata</p>
-            </div>
-        </div>
+
     </section>
 
-    <footer>
-        <p>CAR SPOTTER © 2026</p>
-    </footer>
+    <footer><p>CAR SPOTTER © 2026 — Autorizzazione Livello 4 Richiesta per Trattative</p></footer>
 
     <script src="script.js"></script>
 </body>
